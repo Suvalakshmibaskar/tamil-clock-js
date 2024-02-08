@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #2f3640;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.analogclock {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 10px solid rgb(125, 122, 122);
+  position: relative;
+}
+.analogclock::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(75, 5, 5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.number {
+  padding: 10px;
+  --rotate: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  color: rgb(166, 66, 66);
+  text-align: center;
+  font-size: 25px;
+  transform: rotate(var(--rotate));
+}
+.number-1 {
+  --rotate: 30deg;
+}
+.number-2 {
+  --rotate: 60deg;
+}
+.number-3 {
+  --rotate: 90deg;
+}
+.number-4 {
+  --rotate: 120deg;
+}
+.number-5 {
+  --rotate: 150deg;
+}
+.number-6 {
+  --rotate: 180deg;
+}
+.number-7 {
+  --rotate: 210deg;
+}
+.number-8 {
+  --rotate: 240deg;
+}
+.number-9 {
+  --rotate: 270deg;
+}
+.number-10 {
+  --rotate: 300deg;
+}
+.number-11 {
+  --rotate: 330deg;
+}
+.number-12 {
+  --rotate: 360deg;
+}
+.needle {
+  --rotation: 0;
+  position: absolute;
+  width: 8px;
+  height: 40%;
+  bottom: 50%;
+  left: 50%;
+  background-color: brown;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  z-index: 8;
+  transform-origin: bottom;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+.min {
+  background-color:rgb(165, 118, 118);
+  width: 6px;
+  height: 40%;
+  --rotation: 120;
+}
+.seconds {
+  background-color: rgb(234, 166, 166);
+  width: 6px;
+  height: 43%;
+  --rotation: 320;
+}
+.hrs {
+  background-color: rgb(165, 118, 118);
+  width: 6px;
+  height: 30%;
+  --rotation: 0;
+}
+.dot{
+  width:10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+}
+html,body,.container{
+  height: 100%;
+}
+
+/* .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.clock{
+  width: 406px;
+  height: 406px;
+  background-repeat: no-repeat;
+  background: url(./assests/Clock.png);
+  position: relative;
+}
+.clock img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#second-element{
+  top: 50%;
+} */
+
+p{
+  color: white;
+  font-size: 18px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+.tooltip{
+  background-color: white;
+  color: black;
+  width: 150px;
+  height: 20px;
+  display: none;
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+}
+label{
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
